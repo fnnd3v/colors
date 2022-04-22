@@ -1,0 +1,27 @@
+.panel {
+  .panel--button {
+    margin: 10px;
+    padding: 10px 50px;
+    background-color: #343434;
+    color: #e5e5e5;
+    text-transform: uppercase;
+    border: none;
+    transition: background-color 0.4s, opacity 0.4s;
+  }
+
+  .red:hover {
+    background-color: #e32e2e;
+  }
+  .green:hover {
+    background-color: #54e32e;
+  }
+  .blue:hover {
+    background-color: #1b37c6;
+  }
+  .default:hover {
+    background-color: #141714;
+  }
+  .saturation:hover {
+    opacity: 0.4;
+  }
+}
