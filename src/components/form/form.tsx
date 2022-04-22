@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import { FormHexProps } from "./form.types";
-
-import "./form.styles.scss";
+import { FormProps } from "./form.types";
 import FormHex from "./form-hex/form-hex";
 import { HEXToRGB } from "utils.ts";
 
-const Form: React.FC<FormHexProps> = ({ colorToAdd, setColorToAdd }) => {
+import "./form.styles.scss";
+
+const Form: React.FC<FormProps> = ({ colorToAdd, setColorToAdd }) => {
   const contentWrapper = document.querySelector<HTMLDivElement>(".content");
 
   const [colorInHex, setColorInHex] = useState("#");
@@ -38,11 +38,7 @@ const Form: React.FC<FormHexProps> = ({ colorToAdd, setColorToAdd }) => {
 
   return (
     <form className="form" onSubmit={handleAddColor}>
-      <FormHex
-        colorInHex={colorInHex}
-        setColorChecked={setColorChecked}
-        setColorInHex={setColorInHex}
-      />
+      <FormHex colorInHex={colorInHex} setColorInHex={setColorInHex} />
       <div className="form--buttons">
         <button className="form--button" onClick={handleCheckColor}>
           check color
