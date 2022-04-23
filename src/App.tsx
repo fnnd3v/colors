@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import ColorsList from "components/colors-list/colors-list";
+import FormHex from "components/form/form";
 
 import "./App.scss";
-import FormHex from "components/form/form";
 
 const App = () => {
   const [colorToAdd, setColorToAdd] = useState("#");

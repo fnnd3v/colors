@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 import { RGBToHSL, RGBToObject } from "utils.ts";
+import { ColorModel } from "models";
+import { ColorsListProps } from "./colors-list-types";
 import { colors as colorsDataList } from "data";
 import ColorsListItem from "./colors-list-item/colors-list-item";
-import { ColorModel } from "models";
 import ButtonsPanel from "./buttons-panel/buttons-panel";
 
 import "./colors-list.scss";
 
-const ColorsList: React.FC<{ handleToggleColorsList: () => void }> = ({
-  handleToggleColorsList,
-}) => {
+const ColorsList: React.FC<ColorsListProps> = ({ handleToggleColorsList }) => {
   const [colors, setColors] = useState<ColorModel[]>([]);
   const [filteredColors, setFilteredColors] = useState<ColorModel[]>([]);
 
